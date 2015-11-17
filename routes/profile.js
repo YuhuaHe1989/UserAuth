@@ -7,7 +7,7 @@ var User = require('../models/user');
 
 router.post('/',function(req, res) {
   User.findById(req.body._id, function(err, updateUser){
-    res.status(err ? 400 : 200).send(err || updateUser);
+    res.status(err ? err : 200).send(err || updateUser);
   });
   
 });
