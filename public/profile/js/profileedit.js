@@ -16,7 +16,7 @@ function saveChange(){
     var edit = {};
     var name = $('#name').val();
     var email = $('#email').val();
-    var id = document.cookie.split(' ')[2].slice(7);
+    var id = document.cookie.split(' ')[1].slice(7);
     
     edit.username = name;
     edit.email = email;
