@@ -30,6 +30,7 @@ app.use(express.static('public'));
 app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
 app.use('/turtles', require('./routes/turtles'));
+app.use('/profile',require('./routes/profile'));
 
 // 404 HANDLER
 app.use(function(req, res){

@@ -1,0 +1,65 @@
+extends ./layout
+
+block css
+  link(href='css/style.css', rel='stylesheet')
+
+block content
+    .container
+      h1 Edit Profile
+      hr
+      .row
+        // left column
+        .col-md-3
+          .text-center
+            img.avatar.img-circle(src='//placehold.it/100', alt='avatar')
+            h6 Upload a new photo
+            input.form-control(type='file')
+        // edit form column
+        .col-md-9.personal-info
+          h3 Personal info
+          form.form-horizontal(role='form')
+            .form-group
+              label.col-lg-3.control-label Name:
+              .col-lg-8
+                input.form-control(type='text', value='' id='name')
+            .form-group
+              label.col-lg-3.control-label Email:
+              .col-lg-8
+                input.form-control(type='text', value='' id='email')
+            .form-group
+              label.col-lg-3.control-label Time Zone:
+              .col-lg-8
+                .ui-select
+                  select#user_time_zone.form-control
+                    option(value='Hawaii') (GMT-10:00) Hawaii
+                    option(value='Alaska') (GMT-09:00) Alaska
+                    option(value='Pacific Time (US & Canada)') (GMT-08:00) Pacific Time (US & Canada)
+                    option(value='Arizona') (GMT-07:00) Arizona
+                    option(value='Mountain Time (US & Canada)') (GMT-07:00) Mountain Time (US & Canada)
+                    option(value='Central Time (US & Canada)', selected='selected') (GMT-06:00) Central Time (US & Canada)
+                    option(value='Eastern Time (US & Canada)') (GMT-05:00) Eastern Time (US & Canada)
+                    option(value='Indiana (East)') (GMT-05:00) Indiana (East)
+            .form-group
+              label.col-md-3.control-label Username:
+              .col-md-8
+                input.form-control(type='text', value='')
+            .form-group
+              label.col-md-3.control-label Password:
+              .col-md-8
+                input.form-control(type='password', value='')
+            .form-group
+              label.col-md-3.control-label Confirm password:
+              .col-md-8
+                input.form-control(type='password', value='')
+            .form-group
+              label.col-md-3.control-label
+              .col-md-8
+                input.btn.btn-primary(type='button', value='Save Changes' id="saveChange")
+                span
+                input.btn.btn-default(type='reset', value='Cancel' id='cancel')
+    hr
+
+block js
+  script(src='js/profileedit.js')
+
+    

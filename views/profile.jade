@@ -1,0 +1,35 @@
+extends ./layout
+
+block css
+  link(href='css/style.css', rel='stylesheet')
+
+block content
+    .well.span6
+      .row-fluid
+        .span2
+          img.img-circle(src='https://c1.staticflickr.com/9/8525/8567429824_c5a60dacb5_b.jpg' width='100px')
+        .span8
+          h3#username username
+          h6#email email@gmail.com
+          h6 Ubication: axiba
+          h6 Age: 25
+        .span2
+          .btn-group
+            a.btn.dropdown-toggle.btn-info(data-toggle='dropdown', href='#')
+              | Action 
+              span.icon-cog.icon-white
+              span.caret
+            ul.dropdown-menu
+              li
+                a(href='/profile/edit')
+                  span.icon-wrench
+                  |  Modify
+              li
+                a(href='#')
+                  span.icon-trash
+                  |  Delete
+
+block js
+  script(src='js/profile.js')
+
+  

@@ -26,6 +26,6 @@ router.post('/logout', function(req, res) {
   res.clearCookie('username');
   res.clearCookie('userId');
   res.send();
-})
+});
 
 module.exports = router;
